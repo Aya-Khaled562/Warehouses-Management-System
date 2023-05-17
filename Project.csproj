@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D8B2F7F-532D-41D5-9EC7-3727B9CB8F88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Context.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\ExchangePermit.cs" />
+    <Compile Include="Entities\ExchangePermitDetail.cs" />
+    <Compile Include="Entities\ImportPermit.cs" />
+    <Compile Include="Entities\ImportPermitDetail.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Store.cs" />
+    <Compile Include="Entities\Supplier.cs" />
+    <Compile Include="Entities\Transfer.cs" />
+    <Compile Include="Entities\TransferItem.cs" />
+    <Compile Include="ExchangePermitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExchangePermitForm.Designer.cs">
+      <DependentUpon>ExchangePermitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPremitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportPremitForm.Designer.cs">
+      <DependentUpon>ImportPremitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304052140452_init.cs" />
+    <Compile Include="Migrations\202304052140452_init.designer.cs">
+      <DependentUpon>202304052140452_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304062127356_update.cs" />
+    <Compile Include="Migrations\202304062127356_update.designer.cs">
+      <DependentUpon>202304062127356_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304062136438_updatev2.cs" />
+    <Compile Include="Migrations\202304062136438_updatev2.designer.cs">
+      <DependentUpon>202304062136438_updatev2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304070012156_updateV3.cs" />
+    <Compile Include="Migrations\202304070012156_updateV3.designer.cs">
+      <DependentUpon>202304070012156_updateV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304070104128_updateV5.cs" />
+    <Compile Include="Migrations\202304070104128_updateV5.designer.cs">
+      <DependentUpon>202304070104128_updateV5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304081651576_updateV6.cs" />
+    <Compile Include="Migrations\202304081651576_updateV6.designer.cs">
+      <DependentUpon>202304081651576_updateV6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304081907427_updateV61.cs" />
+    <Compile Include="Migrations\202304081907427_updateV61.designer.cs">
+      <DependentUpon>202304081907427_updateV61.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304092229093_updateV7.cs" />
+    <Compile Include="Migrations\202304092229093_updateV7.designer.cs">
+      <DependentUpon>202304092229093_updateV7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReport.Designer.cs">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReportNo11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReportNo11.Designer.cs">
+      <DependentUpon>ProductReportNo11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreForm.Designer.cs">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreReport.Designer.cs">
+      <DependentUpon>StoreReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferItemReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferItemReport.Designer.cs">
+      <DependentUpon>TransferItemReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExchangePermitForm.resx">
+      <DependentUpon>ExchangePermitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportPremitForm.resx">
+      <DependentUpon>ImportPremitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304052140452_init.resx">
+      <DependentUpon>202304052140452_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304062127356_update.resx">
+      <DependentUpon>202304062127356_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304062136438_updatev2.resx">
+      <DependentUpon>202304062136438_updatev2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304070012156_updateV3.resx">
+      <DependentUpon>202304070012156_updateV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304070104128_updateV5.resx">
+      <DependentUpon>202304070104128_updateV5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304081651576_updateV6.resx">
+      <DependentUpon>202304081651576_updateV6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304081907427_updateV61.resx">
+      <DependentUpon>202304081907427_updateV61.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304092229093_updateV7.resx">
+      <DependentUpon>202304092229093_updateV7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReport.resx">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReportNo11.resx">
+      <DependentUpon>ProductReportNo11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StoreForm.resx">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport.resx">
+      <DependentUpon>StoreReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferItemReport.resx">
+      <DependentUpon>TransferItemReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
